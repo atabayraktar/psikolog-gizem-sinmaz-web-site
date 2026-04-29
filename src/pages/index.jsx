@@ -58,6 +58,7 @@ export default function Home() {
         <link rel="canonical" href={SITE_URL} />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
@@ -78,12 +79,8 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
 
-        {/* Favicon placeholder */}
-        <link rel="icon" href="/favicon.ico" />
-
         {/* Language */}
         <meta httpEquiv="content-language" content="tr" />
-        <html lang="tr" />
       </Head>
 
       <InfoBar />
