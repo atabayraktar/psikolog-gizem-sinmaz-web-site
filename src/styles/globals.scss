@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
+
+:root {
+  // Brand colors
+  --color-dark:         #1E3828;
+  --color-primary:      #2D5A3D;
+  --color-primary-mid:  #3D6B4E;
+  --color-primary-light:#EAF0EC;
+  --color-sage-tint:    #F3F8F4;
+  --color-wine:         #5C2333;
+  --color-wine-light:   #F2E8EA;
+  --color-blush-tint:   #FAF3F4;
+  --color-rose:         #C17B6B;
+  --color-rose-light:   #F5EAE7;
+  --color-cream:        #F0EBE0;
+  --color-cream-light:  #F8F5EF;
+  --color-white:        #FDFCFA;
+  --color-text:         #1A1A1A;
+  --color-text-muted:   #5A5A5A;
+  --color-text-light:   #8A8A8A;
+  --color-border:       #E0D9CE;
+
+  // Typography
+  --font-serif:   'Cormorant Garamond', Georgia, serif;
+  --font-sans:    'DM Sans', system-ui, sans-serif;
+
+  // Spacing scale (8px base)
+  --sp-1: 0.5rem;   // 8px
+  --sp-2: 1rem;     // 16px
+  --sp-3: 1.5rem;   // 24px
+  --sp-4: 2rem;     // 32px
+  --sp-5: 2.5rem;   // 40px
+  --sp-6: 3rem;     // 48px
+  --sp-8: 4rem;     // 64px
+  --sp-10: 5rem;    // 80px
+  --sp-12: 6rem;    // 96px
+  --sp-16: 8rem;    // 128px
+
+  // Shadows
+  --shadow-sm:   0 2px 8px rgba(30, 56, 40, 0.07);
+  --shadow-md:   0 4px 20px rgba(30, 56, 40, 0.10), 0 1px 4px rgba(30, 56, 40, 0.05);
+  --shadow-lg:   0 8px 40px rgba(30, 56, 40, 0.12), 0 2px 8px rgba(30, 56, 40, 0.06);
+
+  // Radius
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  // Transitions
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+// Blog dropdown backdrop
+body.blog-dropdown-open::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 98;
+  background: rgba(10, 14, 10, 0.40);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: backdropIn 0.2s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes backdropIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+// Utility
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--sp-3);
+
+  @media (min-width: 768px) {
+    padding: 0 var(--sp-4);
+  }
+}
+
+// Section label
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-rose);
+  margin-bottom: var(--sp-1);
+}
+
+// Heading helpers
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+// Scroll reveal
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &[data-reveal-delay="100"] { transition-delay: 100ms; }
+  &[data-reveal-delay="150"] { transition-delay: 150ms; }
+  &[data-reveal-delay="200"] { transition-delay: 200ms; }
+  &[data-reveal-delay="300"] { transition-delay: 300ms; }
+  &[data-reveal-delay="400"] { transition-delay: 400ms; }
+  &[data-reveal-delay="500"] { transition-delay: 500ms; }
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

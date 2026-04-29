@@ -1,0 +1,107 @@
+.section {
+  padding: var(--sp-10) 0;
+  background: var(--color-dark);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(193, 123, 107, 0.12) 0%, transparent 65%);
+    pointer-events: none;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-10);
+  align-items: start;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 380px 1fr;
+    gap: var(--sp-12);
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+
+  :global(.section-tag) {
+    color: var(--color-rose);
+  }
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.body {
+  font-size: 1rem;
+  color: rgba(253, 252, 250, 0.65);
+  line-height: 1.75;
+}
+
+.btn {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.75rem 1.75rem;
+  background: var(--color-rose);
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  margin-top: var(--sp-1);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+
+  &:hover {
+    background: #d4897a;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-rose);
+    outline-offset: 3px;
+  }
+}
+
+.right {
+  padding-top: var(--sp-1);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-flex;
+  padding: 0.4375rem 1rem;
+  border: 1px solid rgba(253, 252, 250, 0.18);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: rgba(253, 252, 250, 0.75);
+  background: rgba(253, 252, 250, 0.05);
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+  cursor: default;
+
+  &:hover {
+    border-color: rgba(193, 123, 107, 0.5);
+    color: var(--color-white);
+    background: rgba(193, 123, 107, 0.12);
+  }
+}
