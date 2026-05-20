@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { posts } from '../data/posts'
+import posts from '../data/blogs.json'
 import styles from '../styles/components/Blog.module.scss'
 
 export default function Blog() {

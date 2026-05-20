@@ -4,7 +4,7 @@ import InfoBar from '../../components/InfoBar'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import FloatingActions from '../../components/FloatingActions'
-import { posts } from '../../data/posts'
+import posts from '../../data/blogs.json'
 import styles from '../../styles/pages/blog-detail.module.scss'
 
 export async function getStaticPaths() {
