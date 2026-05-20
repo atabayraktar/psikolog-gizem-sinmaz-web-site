@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
 import InfoBar from '../../components/InfoBar'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -55,7 +56,7 @@ export default function BlogDetail({ post }) {
             {/* Content */}
             <div className={styles.content}>
               {post.content.map((para, i) => (
-                <p key={i}>{para}</p>
+                <ReactMarkdown key={i}>{para}</ReactMarkdown>
               ))}
             </div>
 
