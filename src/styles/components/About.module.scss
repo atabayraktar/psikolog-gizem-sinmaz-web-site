@@ -21,6 +21,7 @@
   text-transform: uppercase;
   color: var(--color-wine);
   align-self: flex-start;
+  margin-bottom: calc(var(--sp-2) - var(--sp-3));
 }
 
 // Two-column row
@@ -142,11 +143,12 @@
   display: flex;
   flex-direction: column;
   gap: var(--sp-2);
+  width: 100%;
 
   p {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     color: var(--color-text-muted);
-    line-height: 1.75;
+    line-height: 1.8;
   }
 }
 
@@ -168,6 +170,96 @@
     color: var(--color-primary);
     flex-shrink: 0;
   }
+}
+
+// Info blocks (Eğitim, Eğitimler, Deneyim)
+.infoTopRow {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  padding-bottom: var(--sp-3);
+  border-bottom: 2px solid var(--color-border);
+
+  > .infoBlock:first-child { flex: 1; }
+  > .infoBlock:last-child  { flex: 1; padding-left: var(--sp-2); }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    > .infoBlock:first-child { padding-bottom: var(--sp-2); }
+    > .infoBlock:last-child  { padding-left: 0; }
+  }
+}
+
+.infoVDivider {
+  width: 2px;
+  background: var(--color-border);
+  flex-shrink: 0;
+  border-radius: 1px;
+  margin: 0 var(--sp-2);
+
+  @media (max-width: 480px) { display: none; }
+}
+
+.infoBlocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--sp-3);
+  align-items: start;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoBlockTitle {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  gap: 1px;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--color-border);
+
+  &:last-child { border-bottom: none; }
+}
+
+.infoMain {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.infoSub {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
 }
 
 // Çalışma Alanlarım strip

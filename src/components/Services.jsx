@@ -4,57 +4,71 @@ import styles from '../styles/components/Services.module.scss'
 const services = [
   {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-        <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
       </svg>
     ),
-    title: 'Bireysel Terapi',
-    desc: 'Kendi hızınızda ilerleyeceğiniz, güvenli ve yargısız bir terapi ortamında kendinizi keşfedin.',
+    title: 'Duygusal Zorlanmalar',
+    desc: 'Yoğun duygusal yük, içsel sıkışmışlık ve günlük yaşamı zorlaştıran duygusal süreçler üzerine çalışma.',
+    tags: ['Kaygı', 'Depresif belirtiler', 'Yoğun stres', 'Tükenmişlik', 'Duygu düzenleme güçlükleri'],
   },
   {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-        <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M6 20v-1a6 6 0 0 1 6-6v0"/>
+        <path d="M18 14l2 2 4-4"/>
       </svg>
     ),
-    title: 'Kaygı & Stres Yönetimi',
-    desc: 'Günlük yaşamınızı etkileyen kaygı ve stresin üstesinden gelmek için kanıta dayalı teknikler.',
+    title: 'Kendilik Algısı ve Özdeğer',
+    desc: 'Kişinin kendisiyle kurduğu ilişki, özdeğer algısı ve algılanma kaygısıyla ilgili duygusal süreçler üzerine çalışma.',
+    tags: ['Değersizlik hissi', 'Yetersizlik hissi', 'Onay ihtiyacı', 'Yargılanma kaygısı', 'Kendine yabancılaşma hissi', 'Beden algısıyla ilişkili güçlükler'],
   },
   {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-        <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
       </svg>
     ),
-    title: 'Depresyon Terapisi',
-    desc: 'Depresyonun farklı yüzleriyle yüzleşmek ve yeniden anlam bulmak için destekleyici bir süreç.',
+    title: 'İlişkisel Problemler',
+    desc: 'Kişinin yakın ilişkilerinde tekrar eden örüntüler, bağ kurma biçimleri ve kişilerarası zorlanmalar üzerine çalışma.',
+    tags: ['İlişki örüntüleri', 'Ayrılık süreçleri', 'Yakınlık problemleri', 'Sınır koyma güçlükleri', 'Yalnızlık hissi'],
   },
   {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-        <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <polyline points="1 4 1 10 7 10"/>
+        <polyline points="23 20 23 14 17 14"/>
+        <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
       </svg>
     ),
-    title: 'İlişki Terapisi',
-    desc: 'Romantik ilişki, aile ya da iş ilişkilerindeki döngüleri fark etme ve dönüştürme üzerine çalışma.',
+    title: 'Düşünsel Döngüler',
+    desc: 'Zihinsel yoğunluk, sürekli düşünme ve kontrol ihtiyacının yarattığı içsel yük üzerine çalışma.',
+    tags: ['Obsesif düşünceler', 'Aşırı düşünme', 'Kontrol ihtiyacı', 'Belirsizliğe tahammülsüzlük', 'Kararsızlık', 'Odaklanma ve harekete geçme güçlüğü'],
   },
   {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m1.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
       </svg>
     ),
-    title: 'Kişisel Gelişim',
-    desc: 'Özgüven, sınır koyma, öz-farkındalık gibi alanlarda kendinizi geliştirmek için yapılandırılmış destek.',
+    title: 'Yaşam Süreçleri',
+    desc: 'Kayıp, değişim ve yaşam içerisindeki geçiş dönemlerinin yarattığı duygusal süreçler üzerine çalışma.',
+    tags: ['Yas ve kayıp', 'Kimlik ve yön arayışı', 'Varoluşsal sorgulamalar'],
   },
   {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-        <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-1m-6 0a2 2 0 002 2h.01M9 17a2 2 0 002 2h.01" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
       </svg>
     ),
-    title: 'Online Seans',
-    desc: 'Nerede olursanız olun, güvenli ve gizli bir platformda yüz yüze kalitesinde çevrimiçi terapi.',
+    title: 'Ek Klinik Alanlar',
+    desc: 'Daha yoğun psikolojik zorlanmalar ve klinik değerlendirme ile özel destek gerektiren alanlarda bireysel ihtiyaca uygun çalışma.',
+    tags: ['Bağımlılık', 'Travmatik yaşantılar', 'Kendine zarar verme düşünceleri'],
   },
 ]
 
@@ -109,10 +123,9 @@ export default function Services() {
     <section id="hizmetler" className={styles.section}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.header} data-reveal>
-          <span className={styles.sectionTag}>Hizmetlerim</span>
-          <h2 className={styles.heading}>Size nasıl yardımcı olabilirim?</h2>
+          <span className={styles.sectionTag}>Çalışma Alanlarım</span>
           <p className={styles.subheading}>
-            Her danışanın hikâyesi benzersizdir. Terapi sürecini sizin ihtiyaçlarınıza göre şekillendiriyorum.
+            Terapi sürecinde kişinin yaşadığı zorlukları yalnızca belirtiler üzerinden değil; duygusal, ilişkisel ve düşünsel boyutlarıyla birlikte ele alıyorum.
           </p>
         </div>
 
@@ -123,6 +136,7 @@ export default function Services() {
               <div className={styles.iconWrap}>{s.icon}</div>
               <h3 className={styles.cardTitle}>{s.title}</h3>
               <p className={styles.cardDesc}>{s.desc}</p>
+              <p className={styles.cardTags}>{s.tags.join(' · ')}</p>
             </div>
           ))}
         </div>

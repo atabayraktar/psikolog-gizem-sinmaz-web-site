@@ -1,6 +1,6 @@
 .section {
   padding: var(--sp-10) 0;
-  background: var(--color-blush-tint);
+  background: var(--color-cream);
 
   @media (max-width: 767px) {
     padding: var(--sp-6) 0;
@@ -41,7 +41,7 @@
 }
 
 .sub {
-  font-size: 1rem;
+  font-size: 1.0625rem;
   color: var(--color-text-muted);
   line-height: 1.7;
 }

@@ -66,7 +66,6 @@ export default function FAQ() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.header} data-reveal>
           <span className={styles.sectionTag}>S.S.S</span>
-          <h2 className={styles.heading}>Sıkça Sorulan Sorular</h2>
           <p className={styles.sub}>
             Aklınıza takılan bir soru burada yoksa, bana doğrudan yazabilirsiniz.
           </p>

@@ -90,7 +90,7 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
-        <Blog />
+        {/* <Blog /> */}{/* TODO: gerçek blog içeriği gelince aç */}
         <FAQ />
         <Contact />
       </main>

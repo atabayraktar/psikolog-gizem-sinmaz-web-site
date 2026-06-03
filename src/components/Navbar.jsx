@@ -4,8 +4,8 @@ import styles from '../styles/components/Navbar.module.scss'
 
 const links = [
   { href: '#hakkimda', label: 'Hakkımda' },
-  { href: '#hizmetler', label: 'Hizmetlerim' },
-  { href: '#blog', label: 'Blog', dropdown: true },
+  { href: '#hizmetler', label: 'Çalışma Alanlarım' },
+  // { href: '#blog', label: 'Blog', dropdown: true }, // TODO: gerçek blog içeriği gelince aç
   { href: '#sss', label: 'S.S.S' },
   { href: '#iletisim', label: 'İletişim / Ulaşım' },
 ]
