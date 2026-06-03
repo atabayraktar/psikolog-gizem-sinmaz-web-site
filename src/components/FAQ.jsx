@@ -3,28 +3,36 @@ import styles from '../styles/components/FAQ.module.scss'
 
 const faqs = [
   {
-    q: 'Terapi süreci nasıl işler?',
-    a: 'İlk seansta birlikte ne üzerinde çalışmak istediğinizi konuşuruz ve size özel bir terapi planı oluştururuz. Seanslar genellikle haftada bir kez gerçekleşir ve 50 dakika sürer. Süreç, ihtiyaçlarınıza göre birkaç aydan birkaç yıla kadar uzayabilir.',
+    q: 'Terapi süreci ne kadar sürer?',
+    a: 'Terapi süreci kişinin ihtiyaçlarına, yaşam koşullarına ve çalışılan konulara göre değişiklik gösterebilir. Bazı kişiler belirli bir konu üzerine kısa süreli çalışmayı tercih ederken, bazı süreçler daha uzun soluklu ilerleyebilir.',
   },
   {
-    q: 'Online terapinin yüz yüzeden farkı nedir?',
-    a: 'Online terapi, yüz yüze terapi kadar etkilidir. Güvenli bir video platformu üzerinden gerçekleştirilen seanslar, mekan engelini ortadan kaldırır. Tek fark, fiziksel bir ofis ortamı yerine kendi güvenli alanınızdan bağlanmanızdır.',
+    q: 'Seanslar ne sıklıkla yapılır?',
+    a: 'Görüşmeler genellikle haftada bir kez olacak şekilde planlanmaktadır. Sürecin ihtiyaçlarına göre bu sıklık birlikte yeniden değerlendirilebilir.',
   },
   {
-    q: 'İlk görüşme ücretsiz mi?',
-    a: 'Evet, ilk 20 dakikalık tanışma görüşmesi ücretsizdir. Bu görüşmede sorularınızı sorabilir, benim çalışma tarzımı tanıyabilir ve terapi sürecine başlamak isteyip istemediğinize karar verebilirsiniz.',
+    q: 'Online terapi yüz yüze terapi kadar etkili midir?',
+    a: 'Uygun koşullar sağlandığında online terapi de yüz yüze terapi kadar etkili bir çalışma alanı sunabilmektedir. Seans sırasında mahremiyetin korunabildiği ve kişinin kendisini rahat hissedebildiği bir ortam oluşturulması önemlidir.',
   },
   {
-    q: 'Seans ücretleri ne kadar?',
-    a: 'Seans ücretleri hakkında bilgi almak için lütfen benimle e-posta veya telefon yoluyla iletişime geçin. Ücretler bireysel koşullar dikkate alınarak görüşülmektedir.',
+    q: 'İlk görüşmede ne konuşulur?',
+    a: 'İlk görüşmede kişinin yaşadığı zorluklar, terapiye başvurma nedeni ve süreçten beklentileri birlikte değerlendirilir. Aynı zamanda terapi sürecinin nasıl ilerlediğine dair genel bir çerçeve oluşturulur.',
   },
   {
-    q: 'Randevumu iptal etmem gerekirse ne yapmalıyım?',
-    a: 'Randevunuzu seans saatinden en az 24 saat önce bildirmenizi rica ederim. 24 saatten kısa süre önce yapılan iptaller için seans ücretinin bir kısmı talep edilebilir.',
+    q: 'Seans süresi ne kadardır?',
+    a: 'Seanslar yaklaşık 50 dakika sürmektedir.',
   },
   {
-    q: 'Bilgilerim gizli tutulacak mı?',
-    a: 'Terapi seanslarındaki tüm bilgiler gizlidir ve etik kurallar çerçevesinde korunur. Yalnızca kendinize ya da başkasına ciddi bir tehlike oluşturulması durumunda yasal yükümlülükler geçerli olabilir.',
+    q: 'Görüşmeler gizli midir?',
+    a: 'Psikoterapi süreci etik ilkeler çerçevesinde gizlilik esasına dayalı olarak yürütülmektedir. Yasal yükümlülük gerektiren istisnai durumlar dışında görüşme içerikleri üçüncü kişilerle paylaşılmaz.',
+  },
+  {
+    q: 'Terapiye başlamak için "çok kötü" durumda olmak gerekir mi?',
+    a: 'Hayır. Terapi yalnızca kriz anlarında başvurulan bir süreç değildir. Kişi kendisini tekrar eden ilişkisel örüntüler, duygusal zorlanmalar ya da yaşamındaki belirli süreçler üzerine düşünmek istediğinde de terapi desteğine başvurabilir.',
+  },
+  {
+    q: 'Seans ücretleri hakkında nasıl bilgi alabilirim?',
+    a: 'Güncel seans ücretleri ve uygunluk bilgisi için iletişim bölümünden ulaşabilirsiniz.',
   },
 ]
 
