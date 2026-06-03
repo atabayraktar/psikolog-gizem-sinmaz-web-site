@@ -181,6 +181,46 @@
   }
 }
 
+// ── Ön Kayıt Formu button (mini hero btnPrimary) ─────────────────
+@keyframes btnPulse {
+  0%, 100% { box-shadow: 0 3px 12px rgba(92, 35, 51, 0.22); }
+  50%       { box-shadow: 0 3px 18px rgba(92, 35, 51, 0.38), 0 0 0 4px rgba(92, 35, 51, 0.08); }
+}
+
+.formBtn {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--color-wine);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: var(--radius-full);
+  box-shadow: 0 3px 12px rgba(92, 35, 51, 0.22);
+  animation: btnPulse 2.5s ease-in-out infinite;
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  white-space: nowrap;
+
+  &:hover {
+    background: #4a1c29;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(92, 35, 51, 0.32);
+    animation: none;
+  }
+
+  &:active { transform: translateY(0); }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+}
+
 // ── Bottom row: contacts + socials ───────────────────────────────
 .bottomRow {
   display: flex;

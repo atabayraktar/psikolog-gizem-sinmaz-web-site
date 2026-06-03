@@ -80,7 +80,7 @@ export default function Sessions() {
                 ))}
               </ul>
 
-              <a href="mailto:gizem@example.com" className={styles.btn}>
+              <a href="mailto:sinmazgizem@gmail.com" className={styles.btn}>
                 Randevu Al
               </a>
             </div>
@@ -89,7 +89,7 @@ export default function Sessions() {
 
         <p className={styles.note}>
           Ücret bilgisi için lütfen{' '}
-          <a href="mailto:gizem@example.com" className={styles.noteLink}>
+          <a href="mailto:sinmazgizem@gmail.com" className={styles.noteLink}>
             iletişime geçin
           </a>
           . İlk görüşme 20 dakika ücretsizdir.

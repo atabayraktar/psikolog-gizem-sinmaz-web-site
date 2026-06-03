@@ -90,7 +90,7 @@ export default function Navbar() {
               }
             }}
           >
-            Psk. Gizem Sınmaz
+            Gizem Sınmaz
           </a>
 
           <nav className={styles.nav} aria-label="Ana menü">

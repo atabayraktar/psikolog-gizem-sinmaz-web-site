@@ -40,7 +40,7 @@ export default function FloatingActions() {
       {/* Bottom-right: WP (top) + Ön Kayıt (bottom) */}
       <div className={styles.right}>
         <a
-          href="https://wa.me/905001234567"
+          href="https://wa.me/905015831121"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.wpBtn}
@@ -48,7 +48,7 @@ export default function FloatingActions() {
         >
           <WhatsAppIcon />
         </a>
-        <a href="#randevu" className={styles.ctaBtn} aria-label="Ön Kayıt Formu">
+        <a href="https://forms.gle/cc5AqyboZmMrDPCMA" target="_blank" rel="noopener noreferrer" className={styles.ctaBtn} aria-label="Ön Kayıt Formu">
           <FormIcon />
           <span className={styles.ctaLabel}>Ön Kayıt Formu</span>
         </a>
