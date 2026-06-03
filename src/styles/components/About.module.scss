@@ -31,7 +31,13 @@
   gap: var(--sp-5);
   align-items: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    grid-template-columns: 40% 1fr;
+    gap: var(--sp-4);
+    align-items: center;
+  }
+
+  @media (min-width: 1200px) {
     grid-template-columns: 38% 1fr;
     gap: var(--sp-6);
   }
@@ -49,13 +55,16 @@
 }
 
 .imageFrame {
-  width: min(380px, 90vw);
+  width: 100%;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
 
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
+
   @media (min-width: 768px) {
-    width: 100%;
     max-width: 400px;
   }
 }
@@ -121,6 +130,10 @@
   flex-direction: column;
   gap: var(--sp-3);
   padding-top: var(--sp-2);
+
+  @media (max-width: 767px) {
+    padding-top: var(--sp-3);
+  }
 }
 
 .heading {
@@ -149,6 +162,10 @@
     font-size: 1.0625rem;
     color: var(--color-text-muted);
     line-height: 1.8;
+
+    @media (max-width: 767px) {
+      font-size: 0.9375rem;
+    }
   }
 }
 
@@ -183,10 +200,18 @@
   > .infoBlock:first-child { flex: 1; }
   > .infoBlock:last-child  { flex: 1; padding-left: var(--sp-2); }
 
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
+    border-bottom: 2px solid var(--color-primary);
+    opacity: 1;
+  }
+
+  @media (max-width: 767px) {
     flex-direction: column;
-    > .infoBlock:first-child { padding-bottom: var(--sp-2); }
-    > .infoBlock:last-child  { padding-left: 0; }
+    > .infoBlock:first-child {
+      padding-bottom: var(--sp-2);
+      border-bottom: 2px solid var(--color-primary);
+    }
+    > .infoBlock:last-child  { padding-left: 0; padding-top: var(--sp-2); }
   }
 }
 
@@ -218,7 +243,7 @@
   gap: 0 var(--sp-3);
   align-items: start;
 
-  @media (max-width: 600px) {
+  @media (max-width: 1199px) {
     grid-template-columns: 1fr;
   }
 }
@@ -236,6 +261,10 @@
   text-transform: uppercase;
   color: var(--color-primary);
   margin-bottom: 0.25rem;
+
+  @media (max-width: 767px) {
+    font-size: 0.8rem;
+  }
 }
 
 .infoItem {
@@ -254,12 +283,20 @@
   font-weight: 500;
   color: var(--color-text);
   line-height: 1.4;
+
+  @media (max-width: 767px) {
+    font-size: 0.9375rem;
+  }
 }
 
 .infoSub {
   font-size: 0.8125rem;
   color: var(--color-text-muted);
   line-height: 1.4;
+
+  @media (max-width: 767px) {
+    font-size: 0.875rem;
+  }
 }
 
 // Çalışma Alanlarım strip

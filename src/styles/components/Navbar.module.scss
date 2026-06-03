@@ -29,6 +29,10 @@
   padding: 0 1.5rem;
   background: transparent;
   transition: top 0.25s ease;
+
+  @media (max-width: 767px) {
+    top: calc(42px + 1.25rem);
+  }
 }
 
 .inner {
@@ -72,10 +76,10 @@
 .nav {
   display: none;
   align-items: center;
-  gap: var(--sp-4);
+  gap: var(--sp-3);
   margin-left: auto;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     display: flex;
   }
 }
@@ -235,7 +239,7 @@
   margin-left: auto;
   padding: 4px;
 
-  @media (min-width: 1024px) { display: none; }
+  @media (min-width: 768px) { display: none; }
 
   span {
     display: block;
@@ -263,7 +267,7 @@
   transition: max-height var(--transition-slow), padding var(--transition-slow), border-color var(--transition-slow);
   border-top: 1px solid transparent;
 
-  @media (min-width: 1024px) { display: none; }
+  @media (min-width: 768px) { display: none; }
 
   &.mobileOpen {
     max-height: 400px;

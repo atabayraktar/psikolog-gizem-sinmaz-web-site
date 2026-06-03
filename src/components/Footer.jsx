@@ -8,7 +8,7 @@ export default function Footer() {
         <div className={styles.main}>
           {/* Left: brand name */}
           <div className={styles.brand}>
-            <span className={styles.brandName}>Gizem Sınmaz</span>
+            <a href="#anasayfa" className={styles.brandName}>Gizem Sınmaz</a>
           </div>
 
           {/* Right: contact + socials */}
@@ -32,7 +32,7 @@ export default function Footer() {
               </div>
               {/* Konum */}
               <a
-                href="https://www.google.com/maps?pb=!1m18!1m12!1m3!1d3050.7980412120323!2d26.416802099999998!3d40.124504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b1a9c66c31d9af%3A0x7f3c38dcad3ea13d!2zw5Z6ZWwgw5Z6Z8O8biBBaWxlIERhbsSxxZ9tYSBNZXJrZXpp!5e0!3m2!1str!2str"
+                href="https://www.google.com/maps/place/Petek+Platin+%C4%B0%C5%9F+Merkezi/@40.124504,26.4168021,17z/data=!3m1!4b1!4m5!3m4!1s0x14b1a9c66c31d9af:0x7f3c38dcad3ea13d!8m2!3d40.124504!4d26.4168021"
                 className={styles.contactAddress}
                 target="_blank"
                 rel="noopener noreferrer"

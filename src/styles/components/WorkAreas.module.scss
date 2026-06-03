@@ -19,10 +19,20 @@
 .inner {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--sp-10);
+  gap: var(--sp-6);
   align-items: start;
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    grid-template-columns: 300px 1fr;
+    gap: var(--sp-6);
+  }
+
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    grid-template-columns: 320px 1fr;
+    gap: var(--sp-8);
+  }
+
+  @media (min-width: 1200px) {
     grid-template-columns: 380px 1fr;
     gap: var(--sp-12);
   }
@@ -79,12 +89,20 @@
 
 .right {
   padding-top: var(--sp-1);
+
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
+  @media (max-width: 767px) {
+    gap: 8px;
+  }
 }
 
 .tag {
@@ -98,6 +116,14 @@
   background: rgba(253, 252, 250, 0.05);
   transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
   cursor: default;
+
+  @media (max-width: 767px) {
+    font-size: 0.875rem;
+    padding: 0.5rem 1.1rem;
+    border-color: rgba(253, 252, 250, 0.25);
+    color: rgba(253, 252, 250, 0.88);
+    background: rgba(253, 252, 250, 0.08);
+  }
 
   &:hover {
     border-color: rgba(193, 123, 107, 0.5);

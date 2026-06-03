@@ -1,6 +1,7 @@
 .section {
   padding: var(--sp-10) 0;
   background: var(--color-blush-tint);
+  overflow: hidden;
 
   @media (max-width: 767px) {
     padding: var(--sp-6) 0;
@@ -43,17 +44,13 @@
   margin-top: var(--sp-1);
 }
 
-// ── Desktop grid (hidden on mobile) ──────────────────────────
+// ── Desktop grid (hidden on mobile + tablet portrait) ──────────
 .grid {
   display: none;
   gap: var(--sp-3);
 
-  @media (min-width: 640px) {
+  @media (min-width: 1200px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -110,11 +107,69 @@
   border-top: 1px solid var(--color-border);
 }
 
+.cardTagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--sp-1);
+  padding-top: var(--sp-1);
+  border-top: 1px solid var(--color-border);
+}
+
+.cardTag {
+  display: inline-flex;
+  padding: 0.3rem 0.75rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+// ── Tablet swiper — 2 per page (768–1023px) ──────────────────
+.tabletSlider {
+  display: none;
+  position: relative;
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.tabletOverflow {
+  flex: 1;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  display: flex;
+  border-radius: var(--radius-lg);
+
+  &::-webkit-scrollbar { display: none; }
+}
+
+.tabletPage {
+  flex-shrink: 0;
+  width: 100%;
+  scroll-snap-align: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+}
+
 // ── Mobile slider (hidden on tablet+) ────────────────────────
 .slider {
   position: relative;
+  overflow: hidden;
 
-  @media (min-width: 640px) {
+  @media (min-width: 640px) and (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
     display: none;
   }
 }
@@ -127,14 +182,17 @@
 
 .track {
   display: flex;
+  align-items: stretch;
   will-change: transform;
 }
 
 .slide {
   flex-shrink: 0;
   width: 100%;
+  display: flex;
 
   .card {
+    flex: 1;
     padding-left: 3.25rem;
     padding-right: 3.25rem;
   }
