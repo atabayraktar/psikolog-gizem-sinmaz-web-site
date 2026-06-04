@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import styles from '../styles/components/Services.module.scss'
+import TherapyFormats from './TherapyFormats'
 
 const services = [
   {
@@ -96,7 +97,7 @@ export default function Services() {
       posRef.current += 1
       setAnim(true)
       setPos(p => p + 1)
-    }, 3500)
+    }, 8000)
   }
 
   useEffect(() => {
@@ -214,6 +215,8 @@ export default function Services() {
             </svg>
           </button>
         </div>
+
+        <TherapyFormats />
       </div>
     </section>
   )
