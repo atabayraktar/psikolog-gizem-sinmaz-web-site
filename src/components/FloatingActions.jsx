@@ -63,7 +63,7 @@ export default function FloatingActions() {
 
   return (
     <>
-      {/* Bottom-right: WP (top) + Ön Kayıt (bottom) */}
+      {/* Bottom-right: WP (top) + Ön Görüşme Formu (bottom) */}
       <div className={styles.right}>
         <a
           href="https://wa.me/905015831121"
