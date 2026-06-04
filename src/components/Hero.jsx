@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from '../styles/components/Hero.module.scss'
 
 export default function Hero() {
@@ -14,10 +15,13 @@ export default function Hero() {
 
       {/* Portrait — blended into background */}
       <div className={styles.imageWrap} aria-hidden="true">
-        <img
-          src="/images/hero.png"
+        <Image
+          src="/images/hero.webp"
           alt=""
           className={styles.portrait}
+          priority
+          fill
+          sizes="(max-width: 1199px) 100vw, 58vw"
         />
       </div>
 

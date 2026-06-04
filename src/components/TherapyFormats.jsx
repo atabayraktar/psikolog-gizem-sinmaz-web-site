@@ -99,7 +99,7 @@ export default function TherapyFormats() {
               onKeyDown={e => e.key === 'Enter' && !isActive && setActiveIdx(i)}
             >
               <div className={styles.iconWrap}>{f.icon}</div>
-              <h3 className={styles.title}>{f.title}</h3>
+              <div className={styles.title}>{f.title}</div>
               <p className={styles.teaser}>{f.desc}</p>
               <p className={styles.fullDesc}>{f.desc}</p>
             </div>
@@ -126,7 +126,7 @@ export default function TherapyFormats() {
               <div key={i} className={styles.slide}>
                 <div className={styles.mobileCard} style={{ background: f.bg }}>
                   <div className={styles.mobileCardIcon}>{f.icon}</div>
-                  <h3 className={styles.mobileCardTitle}>{f.title}</h3>
+                  <div className={styles.mobileCardTitle}>{f.title}</div>
                   <p className={styles.mobileCardDesc}>{f.desc}</p>
                 </div>
               </div>

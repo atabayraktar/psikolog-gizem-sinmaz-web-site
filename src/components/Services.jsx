@@ -145,7 +145,7 @@ export default function Services() {
           {services.map((s) => (
             <div key={s.title} className={styles.card}>
               <div className={styles.iconWrap}>{s.icon}</div>
-              <h3 className={styles.cardTitle}>{s.title}</h3>
+              <div className={styles.cardTitle}>{s.title}</div>
               <p className={styles.cardDesc}>{s.desc}</p>
               <p className={styles.cardTags}>{s.tags.join(' · ')}</p>
             </div>
@@ -165,7 +165,7 @@ export default function Services() {
                 {services.slice(i * 2, i * 2 + 2).map((s) => (
                   <div key={s.title} className={styles.card}>
                     <div className={styles.iconWrap}>{s.icon}</div>
-                    <h3 className={styles.cardTitle}>{s.title}</h3>
+                    <div className={styles.cardTitle}>{s.title}</div>
                     <p className={styles.cardDesc}>{s.desc}</p>
                     <p className={styles.cardTags}>{s.tags.join(' · ')}</p>
                   </div>
@@ -200,7 +200,7 @@ export default function Services() {
                 <div key={i} className={styles.slide}>
                   <div className={styles.card}>
                     <div className={styles.iconWrap}>{s.icon}</div>
-                    <h3 className={styles.cardTitle}>{s.title}</h3>
+                    <div className={styles.cardTitle}>{s.title}</div>
                     <p className={styles.cardDesc}>{s.desc}</p>
                     <p className={styles.cardTags}>{s.tags.join(' · ')}</p>
                   </div>

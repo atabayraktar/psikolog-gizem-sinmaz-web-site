@@ -15,19 +15,19 @@ const blogPosts = [
     slug: 'kaygı-ile-basa-cikma',
     tag: 'Kaygı',
     title: 'Kaygıyla Baş Etmenin 5 Kanıta Dayalı Yolu',
-    img: 'https://placehold.co/400x240/EAF0EC/2D5A3D?text=Kaygı+Yönetimi',
+    img: '/images/blog/placeholder-1.webp',
   },
   {
     slug: 'terapi-nasil-isler',
     tag: 'Terapi',
     title: 'Terapi Nasıl İşler? İlk Seanstan Önce Bilmeniz Gerekenler',
-    img: 'https://placehold.co/400x240/F5EAE7/C17B6B?text=Terapi+Hakkında',
+    img: '/images/blog/placeholder-2.webp',
   },
   {
     slug: 'oz-sefkat',
     tag: 'Kişisel Gelişim',
     title: 'Öz-Şefkat: Kendinize Bir Arkadaşa Davranır Gibi Davranmak',
-    img: 'https://placehold.co/400x240/F0EBE0/1E3828?text=Öz-Şefkat',
+    img: '/images/blog/placeholder-3.webp',
   },
 ]
 

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from '../styles/components/About.module.scss'
 
 const education = [
@@ -51,12 +52,14 @@ export default function About() {
         <div className={styles.mainRow}>
           <div className={styles.imageCol} data-reveal>
             <div className={styles.imageFrame}>
-              <img
+              <Image
                 src="/images/about.webp"
                 alt="Psikolog Gizem Sınmaz hakkında"
                 className={styles.img}
                 width={520}
                 height={640}
+                sizes="(max-width: 767px) 90vw, (max-width: 1199px) 40vw, 380px"
+                style={{ width: '100%', height: 'auto' }}
               />
             </div>
           </div>
@@ -67,7 +70,7 @@ export default function About() {
               {/* Eğitim + Deneyim yan yana */}
               <div className={styles.infoTopRow}>
                 <div className={styles.infoBlock}>
-                  <h3 className={styles.infoBlockTitle}>Eğitim</h3>
+                  <div className={styles.infoBlockTitle}>Eğitim</div>
                   {education.map((e) => (
                     <div key={e.school} className={styles.infoItem}>
                       <span className={styles.infoMain}>{e.school}</span>
@@ -79,7 +82,7 @@ export default function About() {
 
 
                 <div className={styles.infoBlock}>
-                  <h3 className={styles.infoBlockTitle}>Deneyim</h3>
+                  <div className={styles.infoBlockTitle}>Deneyim</div>
                   {experience.map((x) => (
                     <div key={x.place} className={styles.infoItem}>
                       <span className={styles.infoMain}>{x.place}</span>
@@ -91,7 +94,7 @@ export default function About() {
 
               {/* Eğitimler ve Süpervizyon — full width, 2 column */}
               <div className={styles.infoBlock}>
-                <h3 className={styles.infoBlockTitle}>Eğitimler ve Süpervizyon</h3>
+                <div className={styles.infoBlockTitle}>Eğitimler ve Süpervizyon</div>
                 <div className={styles.infoGrid}>
                   <div className={styles.infoCol}>
                     {trainings.slice(0, 4).map((t) => (

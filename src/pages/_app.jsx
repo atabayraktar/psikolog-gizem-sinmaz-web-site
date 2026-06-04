@@ -1,5 +1,22 @@
 import { useEffect } from 'react'
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import '../styles/globals.scss'
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant',
+  display: 'swap',
+})
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+})
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -50,5 +67,9 @@ export default function App({ Component, pageProps }) {
     }
   }, [])
 
-  return <Component {...pageProps} />
+  return (
+    <div className={`${cormorant.variable} ${dmSans.variable}`} style={{ display: 'contents' }}>
+      <Component {...pageProps} />
+    </div>
+  )
 }
