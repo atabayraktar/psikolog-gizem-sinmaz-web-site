@@ -12,11 +12,12 @@ import Footer from '../components/Footer'
 
 const SITE_URL = 'https://gizemsinmaz.com'
 const FULL_NAME = 'Psikolog Gizem Sınmaz'
-const TITLE = `${FULL_NAME} | Klinik Psikolog & Terapist – İstanbul & Online`
+const OG_IMAGE = `${SITE_URL}/images/og-preview.png`
+const TITLE = `${FULL_NAME} | Klinik Psikolog & Terapist – Çanakkale & Online`
 const DESCRIPTION =
-  'Klinik Psikolog Gizem Sınmaz ile bireysel terapi, kaygı yönetimi, depresyon ve kişisel gelişim alanlarında yüz yüze ve online seans seçenekleri. İstanbul, Kadıköy.'
+  'Klinik Psikolog Gizem Sınmaz ile kaygı, depresyon, travma, ilişki sorunları ve benlik saygısı alanlarında bireysel psikoterapi. Çanakkale\'de yüz yüze ve online seans seçenekleri.'
 const KEYWORDS =
-  'psikolog istanbul, online terapi, klinik psikolog, bireysel terapi, kaygı terapisi, depresyon, gizem sınmaz, kadıköy psikolog'
+  'psikolog çanakkale, online terapi, klinik psikolog, bireysel terapi, kaygı terapisi, depresyon, travma terapisi, gizem sınmaz, anksiyete, panik atak, ilişki sorunları, benlik saygısı'
 
 export default function Home() {
   const schema = {
@@ -29,8 +30,8 @@ export default function Home() {
     email: 'gizem@example.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Kadıköy',
-      addressLocality: 'İstanbul',
+      streetAddress: 'Merkez',
+      addressLocality: 'Çanakkale',
       addressCountry: 'TR',
     },
     medicalSpecialty: 'Psychiatry',
@@ -67,11 +68,16 @@ export default function Home() {
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:site_name" content={FULL_NAME} />
         <meta property="og:locale" content="tr_TR" />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={TITLE} />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={TITLE} />
         <meta name="twitter:description" content={DESCRIPTION} />
+        <meta name="twitter:image" content={OG_IMAGE} />
 
         {/* Structured data */}
         <script
