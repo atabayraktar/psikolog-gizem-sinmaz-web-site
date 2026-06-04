@@ -131,7 +131,7 @@ export default function Services() {
   }
 
   return (
-    <section id="hizmetler" className={styles.section}>
+    <section id="calisma-alanlarim" className={styles.section}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.header} data-reveal>
           <span className={styles.sectionTag}>Çalışma Alanlarım</span>
