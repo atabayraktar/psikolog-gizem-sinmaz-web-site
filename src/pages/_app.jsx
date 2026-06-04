@@ -67,9 +67,9 @@ export default function App({ Component, pageProps }) {
     }
   }, [])
 
-  return (
-    <div className={`${cormorant.variable} ${dmSans.variable}`} style={{ display: 'contents' }}>
-      <Component {...pageProps} />
-    </div>
-  )
+  useEffect(() => {
+    document.documentElement.classList.add(cormorant.variable, dmSans.variable)
+  }, [])
+
+  return <Component {...pageProps} />
 }
