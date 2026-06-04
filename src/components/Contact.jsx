@@ -1,24 +1,30 @@
-import { useState } from 'react'
-import styles from '../styles/components/Contact.module.scss'
+import { useState } from "react";
+import styles from "../styles/components/Contact.module.scss";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', message: '' })
+  const [form, setForm] = useState({ name: "", message: "" });
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    const text = encodeURIComponent(`Merhaba, ben ${form.name}.\n\n${form.message}`)
-    window.open(`https://wa.me/905015831121?text=${text}`, '_blank', 'noopener,noreferrer')
-  }
+    e.preventDefault();
+    const text = encodeURIComponent(
+      `Merhaba, ben ${form.name}.\n\n${form.message}`,
+    );
+    window.open(
+      `https://wa.me/905015831121?text=${text}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
 
   return (
     <section id="iletisim" className={styles.section}>
       <div className={`container ${styles.inner}`}>
-
         {/* Header */}
         <div className={styles.header} data-reveal>
           <span className={styles.sectionTag}>İletişim / Ulaşım</span>
           <p className={styles.body}>
-            Terapi süreciyle ilgili bilgi almak, ön görüşme oluşturmak veya soru sormak için iletişime geçebilirsiniz.
+            Terapi süreciyle ilgili bilgi almak, ön görüşme oluşturmak veya soru
+            sormak için iletişime geçebilirsiniz.
           </p>
         </div>
 
@@ -40,7 +46,9 @@ export default function Contact() {
           <div className={styles.formWrap} data-reveal data-reveal-delay="150">
             <form onSubmit={handleSubmit} className={styles.form} noValidate>
               <div className={styles.field}>
-                <label htmlFor="name" className={styles.label}>Ad Soyad <span aria-hidden="true">*</span></label>
+                <label htmlFor="name" className={styles.label}>
+                  Ad Soyad <span aria-hidden="true">*</span>
+                </label>
                 <input
                   id="name"
                   type="text"
@@ -53,20 +61,30 @@ export default function Contact() {
                 />
               </div>
               <div className={styles.field}>
-                <label htmlFor="message" className={styles.label}>Mesajınız <span aria-hidden="true">*</span></label>
+                <label htmlFor="message" className={styles.label}>
+                  Mesajınız <span aria-hidden="true">*</span>
+                </label>
                 <textarea
                   id="message"
                   required
                   rows={5}
                   className={styles.textarea}
                   value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  onChange={(e) =>
+                    setForm({ ...form, message: e.target.value })
+                  }
                   placeholder="Merhaba, terapi süreci hakkında bilgi almak istiyorum..."
                 />
               </div>
               <button type="submit" className={styles.submit}>
-                <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-                  <path d="M16 2C8.28 2 2 8.28 2 16c0 2.46.66 4.77 1.8 6.77L2 30l7.45-1.75A13.94 13.94 0 0016 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5a11.44 11.44 0 01-5.83-1.6l-.42-.25-4.32 1.02 1.04-4.2-.27-.44A11.44 11.44 0 014.5 16C4.5 9.6 9.6 4.5 16 4.5S27.5 9.6 27.5 16 22.4 27.5 16 27.5zm6.27-8.57c-.34-.17-2.02-.99-2.33-1.1-.31-.12-.54-.17-.77.17-.23.34-.88 1.1-1.08 1.33-.2.23-.4.25-.74.08-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.89-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.08-.17-.77-1.85-1.05-2.53-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.08-.91.4-.31.31-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.82 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.31-.23-.65-.4z"/>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 32 32"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M16 2C8.28 2 2 8.28 2 16c0 2.46.66 4.77 1.8 6.77L2 30l7.45-1.75A13.94 13.94 0 0016 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5a11.44 11.44 0 01-5.83-1.6l-.42-.25-4.32 1.02 1.04-4.2-.27-.44A11.44 11.44 0 014.5 16C4.5 9.6 9.6 4.5 16 4.5S27.5 9.6 27.5 16 22.4 27.5 16 27.5zm6.27-8.57c-.34-.17-2.02-.99-2.33-1.1-.31-.12-.54-.17-.77.17-.23.34-.88 1.1-1.08 1.33-.2.23-.4.25-.74.08-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.89-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.08-.17-.77-1.85-1.05-2.53-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.08-.91.4-.31.31-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.82 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.31-.23-.65-.4z" />
                 </svg>
                 WhatsApp'la Mesaj Gönder
               </button>
@@ -77,44 +95,120 @@ export default function Contact() {
         {/* Bottom: phone + email + socials */}
         <div className={styles.bottomRow} data-reveal>
           <div className={styles.bottomContacts}>
-            <a href="https://forms.gle/cc5AqyboZmMrDPCMA" className={styles.formBtn} target="_blank" rel="noopener noreferrer">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            <a
+              href="https://forms.gle/cc5AqyboZmMrDPCMA"
+              className={styles.formBtn}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
               </svg>
-              Ön Kayıt Formu
+              Ön Görüşme Formu
             </a>
             <div className={styles.contactLinks}>
               <a href="tel:+905015831121" className={styles.bottomLink}>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
                 +90 (501) 583 11 21
               </a>
-              <a href="mailto:sinmazgizem@gmail.com" className={styles.bottomLink}>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" strokeLinecap="round" strokeLinejoin="round"/>
-                  <polyline points="22,6 12,13 2,6" strokeLinecap="round" strokeLinejoin="round"/>
+              <a
+                href="mailto:sinmazgizem@gmail.com"
+                className={styles.bottomLink}
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <polyline
+                    points="22,6 12,13 2,6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
                 sinmazgizem@gmail.com
               </a>
             </div>
           </div>
           <div className={styles.bottomSocials}>
-            <a href="https://www.instagram.com/psikologizemsinmaz" className={styles.socialIcon} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            <a
+              href="https://www.instagram.com/psikologizemsinmaz"
+              className={styles.socialIcon}
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                aria-hidden="true"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
               </svg>
             </a>
 
-            <a href="https://wa.me/905015831121" className={styles.socialIcon} aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-              <svg width="17" height="17" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-                <path d="M16 2C8.28 2 2 8.28 2 16c0 2.46.66 4.77 1.8 6.77L2 30l7.45-1.75A13.94 13.94 0 0016 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5a11.44 11.44 0 01-5.83-1.6l-.42-.25-4.32 1.02 1.04-4.2-.27-.44A11.44 11.44 0 014.5 16C4.5 9.6 9.6 4.5 16 4.5S27.5 9.6 27.5 16 22.4 27.5 16 27.5zm6.27-8.57c-.34-.17-2.02-.99-2.33-1.1-.31-.12-.54-.17-.77.17-.23.34-.88 1.1-1.08 1.33-.2.23-.4.25-.74.08-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.89-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.08-.17-.77-1.85-1.05-2.53-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.08-.91.4-.31.31-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.82 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.31-.23-.65-.4z"/>
+            <a
+              href="https://wa.me/905015831121"
+              className={styles.socialIcon}
+              aria-label="WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 32 32"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M16 2C8.28 2 2 8.28 2 16c0 2.46.66 4.77 1.8 6.77L2 30l7.45-1.75A13.94 13.94 0 0016 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5a11.44 11.44 0 01-5.83-1.6l-.42-.25-4.32 1.02 1.04-4.2-.27-.44A11.44 11.44 0 014.5 16C4.5 9.6 9.6 4.5 16 4.5S27.5 9.6 27.5 16 22.4 27.5 16 27.5zm6.27-8.57c-.34-.17-2.02-.99-2.33-1.1-.31-.12-.54-.17-.77.17-.23.34-.88 1.1-1.08 1.33-.2.23-.4.25-.74.08-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.89-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.08-.17-.77-1.85-1.05-2.53-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.08-.91.4-.31.31-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.82 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.31-.23-.65-.4z" />
               </svg>
             </a>
           </div>
         </div>
-
       </div>
     </section>
-  )
+  );
 }
