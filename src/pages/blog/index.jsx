@@ -7,13 +7,40 @@ import FloatingActions from '../../components/FloatingActions'
 import posts from '../../data/blogs.json'
 import styles from '../../styles/pages/blog.module.scss'
 
+const SITE_URL = 'https://gizemsinmaz.com'
+const BLOG_TITLE = 'Blog – Psikoloji ve Terapi Yazıları | Psikolog Gizem Sınmaz'
+const BLOG_DESC = 'Çanakkale klinik psikolog Gizem Sınmaz\'ın kaygı, depresyon, terapi süreci, online seans ve kişisel gelişim hakkında bilgilendirici yazıları.'
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog/` },
+  ],
+}
+
 export default function BlogPage() {
   return (
     <>
       <Head>
-        <title>Blog | Psikolog Gizem Sınmaz</title>
-        <meta name="description" content="Psikoloji, terapi ve kişisel gelişim hakkında bilgilendirici yazılar." />
+        <title>{BLOG_TITLE}</title>
+        <meta name="description" content={BLOG_DESC} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`${SITE_URL}/blog/`} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={BLOG_TITLE} />
+        <meta property="og:description" content={BLOG_DESC} />
+        <meta property="og:url" content={`${SITE_URL}/blog/`} />
+        <meta property="og:site_name" content="Psikolog Gizem Sınmaz" />
+        <meta property="og:locale" content="tr_TR" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </Head>
 
       <InfoBar />

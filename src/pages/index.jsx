@@ -15,30 +15,48 @@ const FULL_NAME = 'Psikolog Gizem Sınmaz'
 const OG_IMAGE = `${SITE_URL}/images/og-preview.png`
 const TITLE = `${FULL_NAME} | Klinik Psikolog & Terapist – Çanakkale & Online`
 const DESCRIPTION =
-  'Klinik Psikolog Gizem Sınmaz ile kaygı, depresyon, travma, ilişki sorunları ve benlik saygısı alanlarında bireysel psikoterapi. Çanakkale\'de yüz yüze ve online seans seçenekleri.'
+  'Çanakkale\'de bireysel psikoterapi ve online seans hizmetleri. Klinik Psikolog Gizem Sınmaz ile kaygı, depresyon, travma, ilişki sorunları ve benlik saygısı alanlarında yüz yüze ve online terapi seçenekleri.'
 const KEYWORDS =
-  'psikolog çanakkale, online terapi, klinik psikolog, bireysel terapi, kaygı terapisi, depresyon, travma terapisi, gizem sınmaz, anksiyete, panik atak, ilişki sorunları, benlik saygısı'
+  'psikolog çanakkale, çanakkale psikolog, çanakkale terapi, çanakkale psikoloji, çanakkale klinik psikolog, çanakkale yüz yüze terapi, çanakkale online seans, çanakkale online terapi, çanakkale psikoterapi, çanakkale bireysel terapi, çanakkale terapi merkezi, çanakkale psikoloji merkezi, çanakkale ruh sağlığı, çanakkale kaygı terapisti, çanakkale depresyon terapisti, çanakkale travma terapisti, çanakkale panik atak terapisti, çanakkale anksiyete terapisi, çanakkale ilişki terapisi, online terapi türkiye, klinik psikolog, bireysel psikoterapi, bireysel terapi, online psikolog, online psikoterapi, kaygı terapisi, kaygı tedavisi, depresyon terapisi, depresyon tedavisi, travma terapisi, travma tedavisi, panik atak terapisi, anksiyete terapisi, ilişki sorunları terapisi, benlik saygısı terapisi, gizem sınmaz, psikolog gizem sınmaz, ruh sağlığı terapisti, psikoterapi, terapi seans, yüz yüze seans, online seans'
 
 export default function Home() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'MedicalBusiness',
+    '@type': 'PsychologicalService',
     name: FULL_NAME,
     description: DESCRIPTION,
     url: SITE_URL,
-    telephone: '+905001234567',
-    email: 'gizem@example.com',
+    telephone: '+905015831121',
+    email: 'sinmazgizem@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Merkez',
       addressLocality: 'Çanakkale',
+      addressRegion: 'Çanakkale',
+      postalCode: '17000',
       addressCountry: 'TR',
     },
-    medicalSpecialty: 'Psychiatry',
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 40.1245,
+      longitude: 26.4168,
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Çanakkale' },
+      { '@type': 'Country', name: 'Türkiye' },
+    ],
+    serviceType: [
+      'Bireysel Psikoterapi',
+      'Online Terapi',
+      'Yüz Yüze Seans',
+      'Kaygı Terapisi',
+      'Depresyon Terapisi',
+      'Travma Terapisi',
+    ],
     openingHours: 'Mo-Fr 09:00-18:00',
+    priceRange: '₺₺',
     sameAs: [
-      'https://instagram.com/',
-      'https://linkedin.com/',
+      'https://www.instagram.com/psikologizemsinmaz',
     ],
     employee: {
       '@type': 'Person',
@@ -87,6 +105,13 @@ export default function Home() {
 
         {/* Language */}
         <meta httpEquiv="content-language" content="tr" />
+
+        {/* Geo / Local SEO */}
+        <meta name="geo.region" content="TR-17" />
+        <meta name="geo.placename" content="Çanakkale" />
+        <meta name="geo.position" content="40.1245;26.4168" />
+        <meta name="ICBM" content="40.1245, 26.4168" />
+        <meta name="author" content={FULL_NAME} />
       </Head>
 
       <InfoBar />
